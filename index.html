@@ -9,17 +9,16 @@
 
 <body>
 <div class="container">
-    <img src="preview.png" alt="图片" id="image"/>
-    <audio src="CompressedBGM.mp3" id="audio" loop preload="auto"></audio>
+    <img src="https://rkt-share-1257441918.cos.ap-shanghai.myqcloud.com/preview.png" alt="图片" id="image"/>
+    <audio src="https://rkt-share-1257441918.cos.ap-shanghai.myqcloud.com/CompressedBGM.mp3" id="audio" loop preload="auto"></audio>
 </div>
 
 <script>
     // 预加载 GIF
     const preloadGif = new Image();
-    preloadGif.src = 'wii.gif'; // 替换为您的 GIF 文件路径
+    preloadGif.src = 'https://rkt-share-1257441918.cos.ap-shanghai.myqcloud.com/wii.gif'; // 替换为您的 GIF 文件路径
     const image = document.getElementById('image');
-
-    // const audio = document.getElementById('audio'); // 如需音乐效果可取消注释
+    const audio = document.getElementById('audio'); // 如需音乐效果可取消注释
 
     function handleImageClick() {
         // 开始播放背景音乐
@@ -41,7 +40,7 @@
 
         // 动画结束后替换图片并移除点击事件监听器
         animation.onfinish = () => {
-            image.src = 'wii.gif'; // 替换为新的图片文件，确保文件名和路径正确
+            image.src = 'https://rkt-share-1257441918.cos.ap-shanghai.myqcloud.com/wii.gif'; // 替换为新的图片文件，确保文件名和路径正确
             image.removeEventListener('click', handleImageClick); // 移除点击事件监听器
         };
     }
