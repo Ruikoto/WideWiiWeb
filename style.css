@@ -1,0 +1,14 @@
+/* 容器样式，用于居中图片 */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 使容器填满整个视口的高度 */
+}
+
+/* 图片样式 */
+#image {
+    max-width: 100%; /* 确保图片不会超出屏幕宽度 */
+    height: auto; /* 保持图片的原始比例 */
+    cursor: pointer; /* 将鼠标光标变为手形，表示可点击 */
+}
