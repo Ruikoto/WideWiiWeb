@@ -9,18 +9,22 @@
 
 <body>
 <div class="container">
-    <img src="image1.png" alt="图片" id="image"/>
-    <!-- <audio src="background-music.mp3" id="audio" loop></audio> --> <!-- 如需音乐效果可取消注释 -->
+    <img src="preview.png" alt="图片" id="image"/>
+     <audio src="CompressedBGM.mp3" id="audio" loop></audio>
 </div>
 
 <script>
+    // 预加载 GIF
+    const preloadGif = new Image();
+    preloadGif.src = 'wii.gif'; // 替换为您的 GIF 文件路径
     const image = document.getElementById('image');
 
     // const audio = document.getElementById('audio'); // 如需音乐效果可取消注释
 
     function handleImageClick() {
         // 开始播放背景音乐
-        // audio.play(); // 如需音乐效果可取消注释
+        const audio = document.getElementById('audio');
+        audio.play(); // 取消注释以播放音乐
 
         // 创建一个动画，将图片从 16:9 拉伸到 9:16
         const animation = image.animate([
@@ -37,7 +41,7 @@
 
         // 动画结束后替换图片并移除点击事件监听器
         animation.onfinish = () => {
-            image.src = 'new-image.gif'; // 替换为新的图片文件，确保文件名和路径正确
+            image.src = 'wii.gif'; // 替换为新的图片文件，确保文件名和路径正确
             image.removeEventListener('click', handleImageClick); // 移除点击事件监听器
         };
     }
