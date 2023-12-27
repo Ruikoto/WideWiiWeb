@@ -12,14 +12,6 @@
     object-fit: cover; /* 保证图片不失真 */
 }
 
-#loadingIndicator {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 20px;
-}
-
 /* 响应式设计：小屏幕设备 */
 @media (max-width: 768px) {
     #image {
